@@ -1,6 +1,6 @@
 # Mercadinho Tomato 🛒🍅
 
-Um **simulador de mercadinho** criado em **JavaScript puro**, com foco em **Programação Orientada a Objetos (POO)**, demonstrando manipulação do DOM, controle de estoque, esteira de produtos e total da compra.  
+Um **simulador de mercadinho** criado em **JavaScript puro**, com foco em **Programação Orientada a Objetos (POO)**, controle de estoque, esteira de produtos e total da compra.  
 
 ---
 

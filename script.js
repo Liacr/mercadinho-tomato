@@ -36,7 +36,9 @@ class Produto {
       itemDiv.remove();
 
       this.estoque++;
-      if (this.estoque > this.estoqueInicial) this.estoque = this.estoqueInicial;
+      if (this.estoque > this.estoqueInicial) {
+        this.estoque = this.estoqueInicial;
+      }
       this.atualizarSpanEstoque();
 
       this.elementoHTML.classList.remove('esgotado');
@@ -67,7 +69,9 @@ class Produto {
 
   atualizarSpanEstoque() {
     const span = this.elementoHTML.querySelector('.estoque-item span');
-    if (span) span.textContent = this.estoque;
+    if (span) {
+      span.textContent = this.estoque;
+    }
   }
 
   resetar() {
@@ -102,17 +106,26 @@ class Caixa {
 
   removerProduto(produto) {
     const index = this.produtos.indexOf(produto);
-    if (index !== -1) this.produtos.splice(index, 1);
+    if (index !== -1) {
+      this.produtos.splice(index, 1);
+    }
   }
 
   atualizarTotal(totalSpan) {
     let totalCompra = 0;
-    this.produtos.forEach(p => totalCompra += p.preco);
+    this.produtos.forEach(p => {
+      totalCompra += p.preco;
+    });
     totalSpan.textContent = `R$ ${totalCompra.toFixed(2)}`;
     return totalCompra;
   }
 
   finalizarCompra(esteira, totalSpan) {
+    if (this.produtos.length === 0) {
+      fala.querySelector('.texto').textContent = "O carrinho está vazio! Adicione algum item antes de finalizar a compra.";
+      return;
+    }
+
     const totalFinal = this.atualizarTotal(totalSpan);
     fala.querySelector('.texto').textContent = `O total deu R$ ${totalFinal.toFixed(2)}. Obrigada pela compra! 😊`;
 
@@ -120,11 +133,14 @@ class Caixa {
     this.produtos = [];
     totalSpan.textContent = 'R$ 0,00';
 
-    Object.values(produtosMap).forEach(produto => produto.resetar());
+    Object.values(produtosMap).forEach(produto => {
+      produto.resetar();
+    });
   }
 }
 
 const caixa = new Caixa();
+
 const produtosMap = {};
 
 itens.forEach(item => {
@@ -143,4 +159,6 @@ itens.forEach(item => {
   });
 });
 
-btnFinalizar.addEventListener('click', () => caixa.finalizarCompra(esteira, total));
+btnFinalizar.addEventListener('click', () => {
+  caixa.finalizarCompra(esteira, total);
+});
