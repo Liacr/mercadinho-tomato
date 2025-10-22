@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercado Tomato</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="mercadinho">
+    <img src="./images/supermarket_checkout.png" alt="Supermercado" class="fundo">
+
+    <div class="painel-itens">
+      <h3>Produtos:</h3>
+      <div class="itens">
+
+        <div class="item" data-nome="Leite" data-preco="4.50" data-estoque="5">
+          <img src="./images/milk_2d.png" alt="Leite">
+          <p class="nome-item">Leite</p>
+          <p class="preco-item">R$ 4,50</p>
+          <p class="estoque-item">Disponível: <span>5</span></p>
+        </div>
+
+        <div class="item" data-nome="Suco" data-preco="7.50" data-estoque="5">
+          <img src="./images/juice_2d.png" alt="Suco">
+          <p class="nome-item">Suco</p>
+          <p class="preco-item">R$ 7,50</p>
+          <p class="estoque-item">Disponível: <span>5</span></p>
+        </div>
+
+        <div class="item" data-nome="Banana" data-preco="2.00" data-estoque="5">
+          <img src="./images/banana_2d.png" alt="Banana">
+          <p class="nome-item">Banana</p>
+          <p class="preco-item">R$ 2,00</p>
+          <p class="estoque-item">Disponível: <span>5</span></p>
+        </div>
+
+        <div class="item" data-nome="Pão" data-preco="3.00" data-estoque="5">
+          <img src="./images/bread_2d.png" alt="Pão">
+          <p class="nome-item">Pão</p>
+          <p class="preco-item">R$ 3,00</p>
+          <p class="estoque-item">Disponível: <span>5</span></p>
+        </div>
+
+        <div class="item" data-nome="Detergente" data-preco="5.00" data-estoque="5">
+          <img src="./images/detergent_2d.png" alt="Detergente">
+          <p class="nome-item">Detergente</p>
+          <p class="preco-item">R$ 5,00</p>
+          <p class="estoque-item">Disponível: <span>5</span></p>
+        </div>
+
+        <div class="item" data-nome="Sabonete" data-preco="2.50" data-estoque="5">
+          <img src="./images/soap_2d.png" alt="Sabonete">
+          <p class="nome-item">Sabonete</p>
+          <p class="preco-item">R$ 2,50</p>
+          <p class="estoque-item">Disponível: <span>5</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="area-caixa">
+      <h3>Esteira</h3>
+      <div class="esteira" id="esteira">
+      </div>
+
+      <div class="total">
+        Total: <span id="total">R$ 0,00</span>
+      </div>
+
+      <button id="finalizar">Finalizar Compra</button>
+    </div>
+
+    <div class="caixa-dialogo">
+      <div class="fala" id="fala">
+        <span class="nome">Lays:</span>
+        <span class="texto">Olá! Bem-vindo ao Tomato. Escolha um produto para passar na esteira!</span>
+      </div>
+    </div>
+
+    <audio id="som-bip" src="./sounds/bip.mp3" preload="auto"></audio>
+    <audio id="musica-fundo" src="./sounds/ambiente.mp3" loop></audio>
+
+    <div id="controle-musica">
+      <button id="play-pause">▶︎</button>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.2">
+    </div>
+  </div>
+  <script src="musica.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
