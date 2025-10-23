@@ -39,23 +39,5 @@ button:hover{background:var(--cor-secundaria);}
 #controle-musica input[type=range]::-webkit-slider-thumb{appearance:none;width:10px;height:10px;border-radius:50%;background:#fff;cursor:pointer;border:none;}
 #controle-musica input[type=range]::-moz-range-thumb{width:8px;height:8px;border-radius:50%;background:#fff;cursor:pointer;border:none;}
 #controle-musica input[type=range]::-moz-range-track{background:rgba(255,255,255,.2);height:4px;border-radius:2px;}
-@media (max-width: 768px) {
-  body {overflow-y:auto;overflow-x:hidden;}
-  .mercadinho {display:flex;flex-direction:column;align-items:center;padding:16px 0;}
-  .painel-itens {order:1;max-width:400px;transform:none;position:static;}
-  .caixa-dialogo {order:2;width:90%;max-width:400px;margin:16px auto;transform:none;position:static;text-align:center;}
-  .area-caixa {order:3;width:90%;max-width:400px;margin-bottom:16px;transform:none;position:static;}
-  .itens {grid-template-columns:repeat(2,1fr);}
-  #controle-musica {position:fixed;bottom:10px;right:10px;top:auto;}
-}
-@media (max-width: 480px) {
-  body {overflow-y:auto;overflow-x:hidden;}
-  .mercadinho {padding:12px 0;}
-  .painel-itens, .area-caixa, .caixa-dialogo {width:90%;padding:12px;}
-  .item img {width:60px;height:60px;}
-  .produto-esteira img {width:28px;height:28px;}
-  button {padding:10px 12px;font-size:.9rem;}
-  .total {font-size:1rem;}
-  .painel-itens h3,.area-caixa h3 {font-size:1rem;}
-  .caixa-dialogo {font-size:.9rem;}
-}
+@media(max-width:768px){body{overflow-y:auto;overflow-x:hidden}.mercadinho{display:flex;flex-direction:column;align-items:center;padding:16px 0}.painel-itens{order:1;max-width:400px;transform:none;position:static}.caixa-dialogo{order:2;width:90%;max-width:400px;margin:16px auto;transform:none;position:static;text-align:center}.area-caixa{order:3;width:90%;max-width:400px;margin-bottom:16px;transform:none;position:static}.itens{grid-template-columns:repeat(2,1fr)}#controle-musica{position:fixed;bottom:10px;right:10px;top:auto}}
+@media(max-width:480px){body{overflow-y:auto;overflow-x:hidden}.mercadinho{padding:12px 0}.painel-itens,.area-caixa,.caixa-dialogo{width:90%;padding:12px}.item img{width:60px;height:60px}.produto-esteira img{width:28px;height:28px}button{padding:10px 12px;font-size:.9rem}.total{font-size:1rem}.painel-itens h3,.area-caixa h3{font-size:1rem}.caixa-dialogo{font-size:.9rem}}
